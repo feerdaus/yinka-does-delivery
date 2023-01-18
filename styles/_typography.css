@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "TT Norms Pro";
+  src: url("/fonts/TTNormsPro/TTNormsProBold.otf");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Norms Pro";
+  src: url("/fonts/TTNormsPro/TTNormsProMedium.otf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Norms Pro";
+  src: url("/fonts/TTNormsPro/TTNormsProRegular.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Norms Pro";
+  src: url("/fonts/TTNormsPro/TTNormsProLight.otf");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+.fs-16-24 {
+  @apply font-medium text-base;
+}
+
+.align-center {
+  @apply flex items-center;
+}
