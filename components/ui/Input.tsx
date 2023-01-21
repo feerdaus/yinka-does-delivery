@@ -1,29 +1,25 @@
 import WarningIcon from "@components/icon/Warning";
-import { HandleChange, SetFieldTouched } from "@components/Shipping/types";
+import { HandleChange, OnBlur, Values } from "@components/Shipping/types";
 import { FC } from "react";
 
 interface IInput {
   label?: string;
-  value: string | number | readonly string[] | undefined;
-  handleChange: HandleChange;
+  value: Values;
+  onChange: HandleChange;
   name: string;
   placeholder?: string;
   type?: string;
-  error?: string;
-  touched?: boolean;
-  setFieldTouched: SetFieldTouched;
+  onBlur: OnBlur;
 }
 
 const Input: FC<IInput> = ({
   name,
   label,
   placeholder,
-  handleChange,
   value,
   type = "text",
-  error,
-  touched,
-  setFieldTouched,
+  onChange,
+  onBlur,
 }) => {
   return (
     <div>
@@ -35,23 +31,36 @@ const Input: FC<IInput> = ({
           id={name}
           type={type}
           name={name}
-          value={value}
+          value={value as any}
           className={`form-control`}
           placeholder={placeholder}
-          onChange={handleChange}
-          onFocus={() => setFieldTouched(name, true)}
+          onChange={onChange}
+          onBlur={onBlur}
         />
       </div>
-      {error && touched && (
-        <small className="text-red align-center text-xs">
-          <span className="mr-2">
-            <WarningIcon />
-          </span>
-          {error}
-        </small>
-      )}
     </div>
   );
 };
 
 export default Input;
+
+interface ICustomErrorMessage {
+  error?: string;
+  touched?: boolean;
+}
+
+export const CustomErrorMessage: FC<ICustomErrorMessage> = ({
+  error,
+  touched,
+}) => (
+  <>
+    {error && touched && (
+      <small className="text-error align-center text-xs">
+        <span className="mr-2">
+          <WarningIcon />
+        </span>
+        {error}
+      </small>
+    )}
+  </>
+);

@@ -1,5 +1,7 @@
 @import url("./_typography");
 @import url("./_btn");
+@import url("./_input");
+@import url("./_switch");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,4 +21,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.error-popup {
+  transform: translateX(-50%);
 }

@@ -1,18 +1,41 @@
-/* .btn {
-  @apply py-2 px-4;
+.btn {
+  @apply py-1 px-2 md:px-4 md:py-3;
 
   &-md {
     @apply py-2 px-3 rounded-md;
   }
 
+  &-lg {
+    @apply px-8 py-2.5;
+  }
+
+  &-full {
+    @apply rounded-full;
+  }
+
   &-green {
-    @apply bg-green text-white;
+    @apply border-b-4 border-dark-green bg-green text-white font-medium;
   }
 
   &-grey {
-    @apply bg-grey rounded-full;
+    @apply bg-grey hover:bg-grey-50;
   }
-} */
+
+  &-red {
+    @apply bg-red border-b-4 border-dark-red text-white;
+  }
+}
+
+.loc {
+  @apply px-4 py-2 text-xs absolute -top-7 text-pry-light -left-full w-32 z-10 bg-white rounded-md;
+  visibility: hidden;
+  box-shadow: 0 0 16px #cacaca;
+  transition-delay: 0.3s;
+}
+
+.has-loc:hover > .loc {
+  visibility: visible;
+}
 
 @keyframes btnArrow {
   0% {
