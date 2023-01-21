@@ -1,0 +1,16 @@
+.form-control {
+  @apply block  w-full focus:outline-none border border-grey bg-grey  rounded-lg p-3 mt-1.5;
+
+  /* 
+  &-error {
+    @apply block w-full focus:outline-none border border-red-600 text-base leading-5 rounded px-3 py-2 mt-1.5;
+  } */
+}
+
+/* .form-control:focus {
+  box-shadow: rgba(248, 102, 36, 0.25) 0 0 0 0.2rem;
+}
+
+.form-label {
+  @apply text-sm leading-4 text-pry;
+} */
