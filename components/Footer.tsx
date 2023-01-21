@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import Email from "./icon/Email";
@@ -60,7 +59,7 @@ const Footer: FC = () => {
               </p>
             </div>
             <Link href="https://logistix.africa">
-              <Image
+              <img
                 alt="logistix logo"
                 src="/logistix-logo.jpg"
                 height={61}

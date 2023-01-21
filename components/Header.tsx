@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 
@@ -7,7 +6,7 @@ const Header: FC = () => {
     <nav>
       <div className="bg-white flex items-center justify-between max-w-screen-lg px-5 font-medium md:px-10 mx-auto h-16">
         <Link href="/" className="flex items-center">
-          <Image src="/logo.jpg" alt="logo" width={40} height={40} />
+          <img src="/logo.jpg" alt="logo" width={40} height={40} />
           <p className="ml-3">Yinka Does Delivery</p>
         </Link>
         <div className="flex items-center text-sm">
