@@ -15,9 +15,9 @@ module.exports = {
       },
       screens: {
         sm: "640px",
-        md: "768px",
+        md: "848px",
         lg: "1024px",
-        lg: "1280px",
+        lg: "1306px",
         xl: "1536px",
       },
       colors: {
@@ -25,8 +25,12 @@ module.exports = {
         "pry-light": "#666",
         grey: "#eaeaea80",
         "grey-50": "#eaeaea",
+        "grey-light": "#fbfbfb",
         green: "#10b981d9",
         "dark-green": "#12996D",
+        red: "#EF4444",
+        "dark-red": "#C43B3C",
+        "light-red": "#fee2e2d9",
       },
       lineHeight: {
         30: "1.875rem",
@@ -37,16 +41,7 @@ module.exports = {
         74: "4.625rem",
       },
       maxWidth: {
-        200: "12.5rem",
-        250: "15.625rem",
-        320: "20rem",
-        348: "21.75rem",
-        480: "30rem",
-        560: "35rem",
-        576: "36rem",
-        720: "45rem",
-        768: "48.2rem",
-        823: "51.4375rem",
+        384: "24rem",
       },
       minWidth: {
         250: "15.625rem",
